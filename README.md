@@ -128,6 +128,8 @@ useEffect(() => {
 
 Кнопки "Назад"/"Вперед"
 
+<img src="images/buttons.png" alt="Project Screenshot" width="1000"/>
+
 Список последних просмотренных блоков
 
 Индикатор текущей позиции
