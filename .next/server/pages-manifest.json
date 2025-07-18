@@ -3,6 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/block/latest": "pages/block/latest.js",
-  "/block/[blockNumber]": "pages/block/[blockNumber].js"
+  "/block/latest": "pages/block/latest.js"
 }
