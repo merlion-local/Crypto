@@ -30,7 +30,7 @@ cd eth-explorer
 npm install
 
 Запуск
-bash
+
 npm run dev
 Приложение будет доступно по адресу: http://localhost:3000
 
@@ -89,17 +89,14 @@ const PROVIDERS = [
 Сетевые проблемы	Alert	"Ошибка подключения к ноде"
 Неверный блок	Alert	"Блок #123 не найден"
 Пустые данные	Typography	"Нет транзакций"
+```
 🎨 UI-компоненты
 
 # BlockInput
-
-<img src="https://raw.githubusercontent.com/merlion-local/Crypto/refs/heads/main/images/BlockInput_1.png" alt="Project Screenshot" width="300"/>
-
-
-
 Поле ввода с валидацией
-
+<img src="images/Blockinput_1.png" alt="Project Screenshot" width="300"/>
 Кнопка быстрого перехода к последнему блоку
+
 
 Интеграция с роутингом
 
