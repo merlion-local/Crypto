@@ -78,7 +78,71 @@ const PROVIDERS = [
   "https://eth.drpc.org",
   "https://cloudflare-eth.com"
 ];
+
+
+export const fetchBlock = createAsyncThunk(
+  'block/fetchBlock',
+  async (blockNumber: string) => {
+    // Последовательно перебираем все доступные RPC-ноды
+    for (const url of providers) {
+      try {
+        // 1. Отправляем запрос к текущей ноде
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            jsonrpc: '2.0',
+            method: 'eth_getBlockByNumber',
+            params: [blockNumber, true], // true - получать полные данные о транзакциях
+            id: 1,
+          }),
+        });
+
+        // 2. Если ответ не OK, переходим к следующей ноде
+        if (!res.ok) continue;
+
+        // 3. Парсим успешный ответ
+        const data = await res.json();
+        
+        // 4. Если есть результат - возвращаем его
+        if (data.result) return data.result;
+
+      } catch {
+        // 5. При ошибке - silently continue (переход к следующей ноде)
+        continue;
+      }
+    }
+    
+    // 6. Если все ноды вернули ошибку
+    throw new Error('Не удалось получить данные ни от одного провайдера');
+  }
+);
 ```
+
+### Ключевые особенности реализации:
+
+Последовательный перебор нод:
+- Используется массив providers с RPC-ендпоинтами
+- Запросы выполняются последовательно до первого успешного
+
+Условия переключения:
+
+- HTTP-статус ответа ≠ 200 (!res.ok)
+- Любые ошибки выполнения запроса (catch-блок)
+- Отсутствие data.result в ответе
+
+Отказоустойчивость:
+- Пустой catch-блок для подавления ошибок
+- Автоматический переход к следующей ноде при проблемах
+- Фильтрация некорректных ответов (if (data.result))
+
+Финал:
+- После исчерпания всех нод - выбрасывается ошибка
+- Ошибка перехватывается в extraReducers
+
+
+
+
 ### Алгоритм работы:
 
 - Последовательный опрос нод
