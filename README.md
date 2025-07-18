@@ -31,7 +31,7 @@ git clone https://github.com/merlion-local/Crypto
 cd eth-explorer
 npm install
 ```
-Запуск
+### Запуск
 ```
 npm run dev
 ```
