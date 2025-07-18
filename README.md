@@ -93,7 +93,7 @@ const PROVIDERS = [
 
 # BlockInput
 
-<img src="images/Blockinput_1.jpeg" alt="Project Screenshot" width="300"/>
+<img src="https://raw.githubusercontent.com/merlion-local/Crypto/refs/heads/main/images/BlockInput_1.png" alt="Project Screenshot" width="300"/>
 
 
 
