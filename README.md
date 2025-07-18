@@ -94,7 +94,7 @@ const PROVIDERS = [
 BlockInput
 <img src="./images/BlockInput_1.png" alt="Скриншот" width="400"/>
 
-![Alt text](/images/BlockInput_1.png)
+![Alt text](images/BlockInput_1.png)
 
 
 Поле ввода с валидацией
