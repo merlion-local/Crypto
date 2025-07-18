@@ -103,7 +103,7 @@ const PROVIDERS = [
 
 Интеграция с роутингом
 
-TransactionsTable
+# TransactionsTable
 
 <img src="images/TransactionsTable.png" alt="Project Screenshot" width="1000"/>
 
@@ -118,11 +118,12 @@ TransactionsTable
 ♻️ Навигация по истории
 Особенности реализации:
 
-ts
+```ts
 // Сохранение истории в localStorage
 useEffect(() => {
   localStorage.setItem('blockHistory', JSON.stringify(history));
 }, [history]);
+```
 Функционал:
 
 Кнопки "Назад"/"Вперед"
