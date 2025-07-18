@@ -99,11 +99,13 @@ const PROVIDERS = [
 
 Кнопка быстрого перехода к последнему блоку
 
+<img src="images/BlockInput_2.png" alt="Project Screenshot" width="500"/>
 
 Интеграция с роутингом
 
 TransactionsTable
-https://i.imgur.com/TABLE.png
+
+<img src="images/TransactionsTable.png" alt="Project Screenshot" width="500"/>
 
 Сортировка по хэшу
 
