@@ -105,7 +105,7 @@ const PROVIDERS = [
 
 TransactionsTable
 
-<img src="images/TransactionsTable.png" alt="Project Screenshot" width="500"/>
+<img src="images/TransactionsTable.png" alt="Project Screenshot" width="1000"/>
 
 Сортировка по хэшу
 
