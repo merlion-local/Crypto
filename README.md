@@ -94,7 +94,7 @@ const PROVIDERS = [
 
 # BlockInput
 Поле ввода с валидацией
-<img src="images/Blockinput_1.png" alt="Project Screenshot" width="300"/>
+<img src="images/BlockInput_1.png" alt="Project Screenshot" width="300"/>
 Кнопка быстрого перехода к последнему блоку
 
 
