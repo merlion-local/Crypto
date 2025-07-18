@@ -1,6 +1,6 @@
 # Ethereum Block Explorer
 
-<img src="https://public.bnbstatic.com/image/pgc/202303/c2a49039dae49296f80d50220095fa90.jpg" alt="Project Screenshot" width="300"/>
+<img src="https://public.bnbstatic.com/image/pgc/202303/c2a49039dae49296f80d50220095fa90.jpg"  alt="Project Screenshot" style="border-radius: 10px; width: 300px;"/>
 
 Веб-приложение для просмотра информации о блоках Ethereum с историей навигации и детализацией транзакций.
 

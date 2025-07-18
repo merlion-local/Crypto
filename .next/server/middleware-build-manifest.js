@@ -24,6 +24,11 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/block/[blockNumber]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/block/[blockNumber].js"
+    ],
     "/block/latest": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
