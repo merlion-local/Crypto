@@ -1,38 +1,28 @@
-name: Deploy Next.js to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    
     steps:
       - uses: actions/checkout@v4
       
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
           
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         
-      - name: Build and Export
-        run: |
-          npm run build
-          npm run export
+      - name: Build
+        run: npm run build
           
-      - name: Create CNAME file (if using custom domain)
-        run: echo "your-domain.com" > ./out/CNAME
-        
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          enable_jekyll: false
-          cname: your-domain.com  # опционально

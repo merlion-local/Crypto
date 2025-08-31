@@ -1,14 +1,15 @@
 {
   "name": "eth-explorer",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export",
-    "deploy": "npm run export && gh-pages -d out -t true",
+    "export": "next build",
+    "deploy": "npm run build && gh-pages -d out -t true",
     "predeploy": "npm run build"
   },
   "homepage": "https://merlion-local.github.io/Crypto",
