@@ -4,4 +4,16 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #222;
+  -webkit-text-size-adjust: 100%; /* Предотвращает увеличение текста на iOS */
+}
+
+/* Улучшение скролла на мобильных */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Улучшение tap-целей для мобильных */
+button, a {
+  min-height: 44px;
+  min-width: 44px;
 }
