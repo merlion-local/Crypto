@@ -6,15 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export",
+    "deploy": "npm run export && gh-pages -d out -t true",
+    "predeploy": "npm run build"
   },
+  "homepage": "https://merlion-local.github.io/Crypto",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.2.0",
     "@mui/material": "^7.2.0",
     "@reduxjs/toolkit": "^1.9.7",
-    "next": "^14.2.30",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.1.3"
@@ -23,6 +26,8 @@
     "@types/node": "^20.4.2",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "gh-pages": "^6.3.0",
+    "next": "^15.5.2",
     "typescript": "^5.4.0"
   }
 }
