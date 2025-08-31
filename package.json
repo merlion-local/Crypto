@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next build",
-    "deploy": "npm run build && gh-pages -d out -t true",
+    "deploy": "npm run build && npx gh-pages -d out -t true -r https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git",
     "predeploy": "npm run build"
   },
   "homepage": "https://merlion-local.github.io/Crypto",
