@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[331],{167:(_,e,t)=>{"use strict";t.r(e),t.d(e,{default:()=>u});let u=t(6315).default},8722:(_,e,t)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/block/latest",function(){return t(167)}])}},_=>{_.O(0,[204,315,636,593,792],()=>_(_.s=8722)),_N_E=_.O()}]);
